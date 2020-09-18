@@ -8,11 +8,17 @@
 #include <time.h>
  
 /* Program Parameters */
-define MAXN 2000  /* Max value of N */
-int N;  /* Matrix size */
- 
+#define MAXN 1000  /* Max value of N */
+int size;  /* Matrix size */
+
+void Input_Matrix()///* Input Matrix size */
+{
+    printf("Input Matrix Size:\n");
+    scanf("%d",&size);
+ }
+
 /* Matrices and vectors */
-volatile float A[MAXN][MAXN], B[MAXN], X[MAXN];
+volatile double A[N][N], B[N], X[N];
 /* A * X = B, solve for X */
  
 /* junk */
@@ -70,10 +76,10 @@ void initialize_inputs() {
   printf("\nInitializing...\n");
   for (col = 0; col < N; col++) {
     for (row = 0; row < N; row++) {
-      A[row][col] = (float)rand() / 32768.0;
+      A[row][col] = (double)rand() / 32768.00;
     }
-    B[col] = (float)rand() / 32768.0;
-    X[col] = 0.0;
+    B[col] = (double)rand() / 32768.00;
+    X[col] = 0.00;
   }
  
 }
